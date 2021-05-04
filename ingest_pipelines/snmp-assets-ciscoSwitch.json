@@ -1,0 +1,44 @@
+{
+  "snmp-assets-ciscoSwitch" : {
+    "description" : "SNMP Asset Pipelive Cisco 3750x",
+    "processors" : [
+      {
+        "grok" : {
+          "field" : "bootimage",
+          "patterns" : [
+            "%{WORD:host.boot.drive}:/%{GREEDYDATA:host.boot.path}/%{GREEDYDATA:host.boot.image}"
+          ],
+          "description" : "host boot image info"
+        }
+      },
+      {
+        "grok" : {
+          "field" : "description",
+          "patterns" : [
+            "%{WORD:host.manufacturer} %{WORD:host.platform}"
+          ],
+          "description" : "host mfg & platform"
+        }
+      },
+      {
+        "remove" : {
+          "ignore_missing" : true,
+          "field" : [
+            "bootimage",
+            "description"
+          ],
+          "description" : "desc & bootinfo"
+        }
+      }
+    ],
+    "version" : 1,
+    "on_failure" : [
+      {
+        "set" : {
+          "value" : "{{ _ingest.on_failure_message}}",
+          "field" : "error.message"
+        }
+      }
+    ]
+  }
+}
