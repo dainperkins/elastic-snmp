@@ -1,3 +1,3 @@
 # Elastic Ingest pipelines
 
-Used to tweak 
+example used to tweak cisco switch boot info into ECS format
