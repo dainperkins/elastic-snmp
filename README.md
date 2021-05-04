@@ -10,6 +10,6 @@ Easy enough to adjust for in the snmp input config, but adjustment will be speci
 
 Theres also 2 community snmp beats that could probably be used with ingest pipelines, probably worth a look
 
-https://github.com/sydneybrokeit/netbeat   - I think this one looks the most promising 
-https://github.com/isalgueiro/otilio
-https://github.com/hoat23/snmpbeat
+- https://github.com/sydneybrokeit/netbeat   - I think this one looks the most promising 
+- https://github.com/isalgueiro/otilio
+- https://github.com/hoat23/snmpbeat
