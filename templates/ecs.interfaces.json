@@ -1,0 +1,167 @@
+PUT _component_template/ecs.interface
+{
+  "template": {
+    "settings": {},
+    "mappings": {
+      "_source": {
+        "enabled": false
+      },
+      "properties": {
+        "interface": {
+          "properties": {
+            "alias": {
+              "type": "keyword",
+              "ignore_above": 256
+            },
+            "bytes": {
+              "properties": {
+                "in": {
+                  "type": "long"
+                },
+                "out": {
+                  "type": "long"
+                }
+              }
+            },
+            "description": {
+              "type": "text"
+            },
+            "discards": {
+              "properties": {
+                "in": {
+                  "type": "long"
+                },
+                "out": {
+                  "type": "long"
+                }
+              }
+            },
+            "enabled": {
+              "type": "boolean"
+            },
+            "errors": {
+              "properties": {
+                "in": {
+                  "type": "long"
+                },
+                "out": {
+                  "type": "long"
+                }
+              }
+            },
+            "index": {
+              "type": "keyword",
+              "ignore_above": 256
+            },
+            "last_changed": {
+              "type": "long"
+            },
+            "mac": {
+              "type": "keyword",
+              "ignore_above": 256
+            },
+            "mtu": {
+              "type": "long"
+            },
+            "name": {
+              "type": "keyword",
+              "ignore_above": 256
+            },
+            "packets": {
+              "properties": {
+                "in": {
+                  "type": "long"
+                },
+                "out": {
+                  "type": "long"
+                },
+                "non-unicast": {
+                  "properties": {
+                    "in": {
+                      "type": "long"
+                    },
+                    "out": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "unicast": {
+                  "properties": {
+                    "in": {
+                      "type": "long"
+                    },
+                    "out": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "multicast": {
+                  "properties": {
+                    "in": {
+                      "type": "long"
+                    },
+                    "out": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "broadcast": {
+                  "properties": {
+                    "in": {
+                      "type": "long"
+                    },
+                    "out": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "unknown_protocols": {
+                  "properties": {
+                    "in": {
+                      "type": "long"
+                    }
+                  }
+                }
+              }
+            },
+            "power": {
+              "properties": {
+                "allocated": {
+                  "type": "long"
+                },
+                "current": {
+                  "type": "long"
+                },
+                "enabled": {
+                  "type": "boolean"
+                },
+                "ieee": {
+                  "type": "boolean"
+                },
+                "max": {
+                  "type": "long"
+                }
+              }
+            },
+            "promiscuous": {
+              "type": "boolean"
+            },
+            "queue_length_out": {
+              "type": "long"
+            },
+            "speed": {
+              "type": "long"
+            },
+            "type": {
+              "type": "keyword",
+              "ignore_above": 256
+            },
+            "up": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  }
+}
